@@ -1,0 +1,505 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body
+{
+    background: #000;
+    min-height: 200vh;
+    width: 100%;
+    height: 200vh;
+    background-size: contain;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger
+{
+    display: none;
+}
+
+header
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    transition: 0.6s;
+    padding: 40px 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 25px #000, 0px 0px 25px #000;
+    z-index: 1000;
+}
+
+header.sticky
+{
+    padding: 5px 100px;
+    background: #680000;
+    box-shadow: 0px 0px 25px #680000, 0px 0px 25px #680000;
+}
+
+header .logo
+{
+    position: relative;
+    text-decoration: none;
+    size: 0ch;
+    width: 300px;
+    transition: 0.6s;
+    margin: 0 15px;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.5s;
+    font-size: 25px;
+    margin-left: 100px;
+    display: block;
+}
+
+header ul li a:hover
+{
+    font-size: 28px;
+}
+
+header ul li button
+{
+    width: 130px;
+    height: 55px;
+    font-size: 25px;
+    background: none;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+header ul li button:hover
+{
+    background: #fff;
+    color: #000;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+}
+
+.intro
+{
+    text-align: center;
+    font-size: 5rem;
+    font-family: monospace;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.intro .tekst
+{
+    color: rgb(255, 49, 49);
+    position: relative;
+}
+
+.intro .tekst.tekst1
+{
+    color: #fff;
+}
+
+.intro .tekst.tekst2:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    border-left: 5px solid rgb(255, 49, 49);
+    animation: animate 4s steps(10) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.main h2
+{
+    font-size: 4rem;
+    font-family: monospace;
+    color: #fff;
+    border-bottom: 4px solid #fff;
+    margin-bottom: 50px;
+}
+
+.main p
+{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    color: #fff;
+}
+
+.main
+{
+    background: none;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    align-items: center;
+}
+
+.p2
+{
+    margin-bottom: 50px;
+}
+
+.main button
+{
+    border: 4px solid rgb(255, 49, 49);
+    color: rgb(255, 49, 49);
+    margin-top: 100px;
+    background: none;
+    padding: 15px 40px;
+    font-size: 38px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.4s;
+    z-index: 998;
+}
+
+.main button:hover
+{
+    color: #fff;
+    background: rgb(255, 49, 49);
+    padding: 20px 45px;
+    font-size: 43px;
+}
+
+.hero
+{
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer
+{
+    background: linear-gradient(180deg, rgba(78,78,78,1) 0%, rgba(31,31,31,1) 35%, rgba(0,0,0,1) 100%);
+    margin-top: auto;
+    box-shadow: 0px 0px 45px #5f5f5f, 0px 0px 25px #1c1c1c;
+    width: 100%;
+
+}
+
+.footercontent
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #fff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footercontent p
+{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.colorchange
+{
+    color: rgb(255, 49, 49);
+}
+
+.icons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    z-index: 999;
+    gap: 30%;
+}
+
+.icons img
+{
+    width: 200px;
+}
+
+.Home
+{
+    border-bottom: 2px solid #fff;
+}
+
+.desc
+{
+    margin-bottom: 100px;
+}
+
+.desc p
+{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.Contact2
+{
+    border-bottom: 2px solid #fff;
+}
+
+.mail
+{
+    background: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 400px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+.mail h1
+{
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.mail p
+{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 40px;
+
+}
+
+.mail input, textarea, button
+{
+    margin: 4px 0;
+    padding: 8px;
+    font-size: 25px;
+}
+
+.mail textarea
+{
+    background: #fff;
+    width: 700px;
+    height: 200px;
+    resize: none;
+}
+
+.mail input
+{
+    width: 600px;
+}
+
+.mail button
+{
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+    background: none;
+    color: rgb(255, 49, 49);
+    border: 4px solid rgb(255, 49, 49);
+    transition: 0.3s;
+}
+
+.mail button:hover
+{
+    background-color: rgb(255, 49, 49);
+    color: #fff;
+    width: 205px;
+    height: 105px;
+    font-size: 35px;
+}
+
+.footer2
+{
+    background: linear-gradient(180deg, rgba(78,78,78,1) 0%, rgba(31,31,31,1) 35%, rgba(0,0,0,1) 100%);
+    margin-top: 790px;
+    box-shadow: 0px 0px 45px #5f5f5f, 0px 0px 25px #1c1c1c;
+    width: 100%;
+
+}
+
+@media only screen and (max-width: 1320px) {
+    header
+    {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header
+    {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .hamburger
+    {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line
+    {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        margin: 6px 0;
+    }
+
+    .navbar
+    {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #000;
+        transition: 0.5s;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        align-items: center;
+        transition: 0.5s;
+        opacity: 0;
+        gap: 60px;
+    }
+
+    .navbar.active
+    {
+        height: 650px;
+    }
+
+    .navbar.active ul
+    {
+        opacity: 1;
+    }
+
+
+    .navbar ul li a
+    .navbar ul li a button
+    {
+        margin-bottom: 12px;
+    }
+
+    .navbar ul li button
+    {
+        width: 130px;
+        height: 55px;
+        font-size: 25px;
+        background: none;
+        color: #fff;
+        border: 3px solid #fff;
+        margin: 5px 0;
+        margin-left: 80px;
+    }
+
+    .main {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .icons img
+    {
+        width: 100px;
+    }
+
+    .tekst1
+    {
+        font-size: 60px;
+    }
+
+    .footercontent
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mail input
+    {
+        width: 70%;
+    }
+
+    .mail textarea
+    {
+        width: 80%;
+    }
+
+    .mail h1
+    {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .mail p
+    {
+        text-align: center;
+    }
+}
